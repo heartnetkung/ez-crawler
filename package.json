@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/heartnetkung/ez-crawler/issues"
   },
-  "homepage": "https://github.com/heartnetkung/ez-crawler#readme"
+  "homepage": "https://github.com/heartnetkung/ez-crawler#readme",
+  "dependencies": {
+    "crawler": "^1.0.5",
+    "lodash": "^4.17.4"
+  }
 }
