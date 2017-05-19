@@ -1,0 +1,19 @@
+{
+  "name": "ez-crawler",
+  "version": "1.0.0",
+  "description": "exports.crawl({ \tinitUrl: 'https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A1', \tcontentRipper: function($) { \t\treturn $('#mw-content-text').text() \t\t\t.replace(/([ \\t])[ \\t]*/g, '$1') \t\t\t.replace(/\\n\\n*/g, '\\n') \t\t\t.replace(/^\\s*[ก-ฮ]\\s*$/gm, '') \t\t\t.replace(/^↑[^\\n]+$/gm, ''); \t}, \tdataUrlFilter: function(theUrl) { \t\tvar parts = url.parse(theUrl); \t\tif (parts.hostname !== 'th.wikipedia.org') \t\t\treturn false; \t\tvar path = decodeURI(parts.path); \t\treturn /^\\/wiki\\/([^.:]+)$/.test(path) && !/\\/wiki\\/หน้าหลัก|\\/wiki\\/PubMed/.test(path); \t}, \tmaxPages: 500, \tmaxConnections: 10 }, function() {});",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heartnetkung/ez-crawler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heartnetkung/ez-crawler/issues"
+  },
+  "homepage": "https://github.com/heartnetkung/ez-crawler#readme"
+}
